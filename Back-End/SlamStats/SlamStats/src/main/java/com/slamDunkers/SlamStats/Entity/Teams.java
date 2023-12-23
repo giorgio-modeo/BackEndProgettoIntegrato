@@ -1,15 +1,14 @@
 package com.slamDunkers.SlamStats.Entity;
 
-import jakarta.persistence.*;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
+import com.slamDunkers.SlamStats.Payload.Response.TeamsResponse;
+import jakarta.persistence.*;
+import lombok.*;
+
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
 public class Teams {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,17 +30,30 @@ public class Teams {
 	@Column(name = "logo", columnDefinition = "string" )
 	private String Logo;
 
-	@Column(name = "AllStar", columnDefinition = "TINYINT(1)")
+	@Column(name = "all_star", columnDefinition = "tinyint(1)")
 	private boolean AllStar;
 
 	@Column(name = "nbaFranchise", columnDefinition = "TINYINT(1)")
 	private boolean nbaFranchise;
-//
-//	@OneToOne
-//	@JoinColumn(name = "league_id", nullable = false)
-//	private int LEAGUE_ID;
+
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name="league_id", nullable = false)
+	private League league;
 
 
+	public TeamsResponse toTeamsResponse() {
+		return new TeamsResponse(
+				this.Name,
+				this.City,
+				this.Logo,
+				this.Nickname,
+				this.AllStar,
+				this.nbaFranchise,
+				this.league.getName(),
+				this.league.getConference(),
+				this.league.getDivision()
+		);
+	}
 
 
 }

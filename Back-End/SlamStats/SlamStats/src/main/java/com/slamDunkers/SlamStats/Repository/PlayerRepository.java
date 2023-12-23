@@ -1,4 +1,5 @@
 package com.slamDunkers.SlamStats.Repository;
+
 import com.slamDunkers.SlamStats.Entity.Player;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
