@@ -15,8 +15,9 @@ public class Division {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID", columnDefinition = "int")
-	private int Id;
+	private Integer Id;
 
-	@Column(name = "name", columnDefinition = "string")
+	@Column(name = "name", columnDefinition = "varchar(255) ")
 	private String Name;
 }
+ 

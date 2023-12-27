@@ -18,16 +18,20 @@ public class Player {
 	@Column(name = "id", columnDefinition = "int")
 	private int Id;
 
-	@Column(name = "first_name", columnDefinition = "string")
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "team_id ", nullable = false)
+	private Teams team;
+
+	@Column(name = "first_name", columnDefinition = "varchar(255)")
 	private String firstName;
 
-	@Column(name = "last_name", columnDefinition = "string")
+	@Column(name = "last_name", columnDefinition = "varchar(255)")
 	private String lastName;
 
 	@Column(name = "birth_date", columnDefinition = "date")
 	private Date birthDate;
 
-	@Column(name = "birth_Country", columnDefinition = "string")
+	@Column(name = "birth_Country", columnDefinition = "varchar(255)")
 	private String birthCountry;
 
 	@Column(name = "nba_Start", columnDefinition = "year")
@@ -51,9 +55,9 @@ public class Player {
 	@Column(name = "weight_kg", columnDefinition = "decimal")
 	private Double weightKilograms;
 
-	@Column(name = "college", columnDefinition = "string")
+	@Column(name = "college", columnDefinition = "varchar(255)")
 	private String college;
 
-	@Column(name = "affiliation", columnDefinition = "string")
+	@Column(name = "affiliation", columnDefinition = "varchar(255)")
 	private String lastAffiliation;
 }

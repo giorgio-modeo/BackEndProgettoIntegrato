@@ -18,7 +18,7 @@ import java.util.Optional;
 @CrossOrigin
 public class TeamsController {
 	@Autowired
-	private TeamsService service;
+	private final TeamsService service;
 	@Autowired
 	public TeamsController(TeamsService service) {
 		this.service = service;
@@ -30,24 +30,23 @@ public class TeamsController {
 		return service.selezzionaTuttiTeams();
 	}
 
-	@GetMapping("/home")
-	public List<TeamsResponse> getAllTeamsAsPayload() {
-		List<Teams> teams = service.selezzionaTuttiTeams();
-		List<TeamsResponse> teamsResponses = new ArrayList<>();
-		for (Teams team : teams) {
-			teamsResponses.add(team.toTeamsResponse());
-		}
-		return teamsResponses;
-	}
-
-	@GetMapping("/squadra")
-	public TeamsResponse getTeamById(int id) {
-		Optional<Teams> team =service.selezionaTeamById(id);
-		if(team.isPresent()) {
-			TeamsResponse teamsResponse = team.get().toTeamsResponse();
-			return teamsResponse;
-		}
-		else
-			return null;
-	}
+//	@GetMapping("/home")
+//	public List<TeamsResponse> getAllTeamsAsPayload() {
+//		List<Teams> teams = service.selezzionaTuttiTeams();
+//		List<TeamsResponse> teamsResponses = new ArrayList<>();
+//		for (Teams team : teams) {
+//			teamsResponses.add(team.toTeamsResponse());
+//		}
+//		return teamsResponses;
+//	}
+//
+//	@GetMapping("/squadra")
+//	public TeamsResponse getTeamById(int id) {
+//		Optional<Teams> team =service.selezionaTeamById(id);
+//		if(team.isPresent()) {
+//			return team.get().toTeamsResponse();
+//		}
+//		else
+//			return null;
+//	}
 }

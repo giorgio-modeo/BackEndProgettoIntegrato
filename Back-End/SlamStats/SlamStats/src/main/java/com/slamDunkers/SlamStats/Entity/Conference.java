@@ -16,6 +16,6 @@ public class Conference {
 	@Column(name = "ID", columnDefinition = "int")
 	private int Id;
 
-	@Column(name = "name", columnDefinition = "string")
+	@Column(name = "name", columnDefinition = "varchar(255)")
 	private String Name;
 }

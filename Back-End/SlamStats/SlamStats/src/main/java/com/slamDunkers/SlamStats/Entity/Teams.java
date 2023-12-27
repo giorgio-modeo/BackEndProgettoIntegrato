@@ -14,35 +14,51 @@ public class Teams {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@EqualsAndHashCode.Include
 	@Column(name = "ID", columnDefinition = "int")
-	private int Id;
+	private Integer Id;
 
-	@Column(name = "name", columnDefinition = "string")
+	@Column(name = "name", columnDefinition = "varchar(255)")
 	private String Name;
 
-	@Column(name = "nickname", columnDefinition = "string")
+	@Column(name = "nickname", columnDefinition = "varchar(255)")
 	private String Nickname;
 
-	@Column(name = "code", columnDefinition = "string")
+	@Column(name = "code", columnDefinition = "varchar(255)")
 	private String Code;
-	@Column(name = "city", columnDefinition = "string")
+	@Column(name = "city", columnDefinition = "varchar(255)")
 	private String City;
 
-	@Column(name = "logo", columnDefinition = "string" )
+	@Column(name = "logo", columnDefinition = "varchar(255)" )
 	private String Logo;
 
 	@Column(name = "all_star", columnDefinition = "tinyint(1)")
 	private boolean AllStar;
 
-	@Column(name = "nbaFranchise", columnDefinition = "TINYINT(1)")
+	@Column(name = "nbaFranchise", columnDefinition = "tinyint(1)")
 	private boolean nbaFranchise;
 
-	@OneToOne(fetch = FetchType.EAGER)
+@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="league_id", nullable = false)
 	private League league;
 
 
 	public TeamsResponse toTeamsResponse() {
-		return new TeamsResponse(
+
+		if (this.league.getDivisionId() == null) {
+			TeamsResponse teamsResponse = new TeamsResponse(
+					this.Name,
+					this.City,
+					this.Logo,
+					this.Nickname,
+					this.AllStar,
+					this.nbaFranchise,
+					this.league.getName(),
+					this.league.getConference()
+
+			);
+			return teamsResponse;
+
+		}
+		TeamsResponse teamsResponse = new TeamsResponse(
 				this.Name,
 				this.City,
 				this.Logo,
@@ -51,8 +67,14 @@ public class Teams {
 				this.nbaFranchise,
 				this.league.getName(),
 				this.league.getConference(),
+
 				this.league.getDivision()
+
 		);
+		return teamsResponse;
+
+
+
 	}
 
 
