@@ -7,18 +7,16 @@ import java.time.Year;
 import java.util.Date;
 
 
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
 public class Player {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@EqualsAndHashCode.Include
-	@Column(name = "id", columnDefinition = "int")
+	@Column(name = "ID", columnDefinition = "int")
 	private int Id;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "team_id ", nullable = false)
 	private Teams team;
 

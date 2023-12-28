@@ -25,11 +25,14 @@ public class Games {
 	private League league;
 
 
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "home_team")
+	private Teams homeTeam;
 
-	@Column(name = "home_team", columnDefinition = "int")
-	private int homeTeam;
-	@Column(name = "away_team", columnDefinition = "int")
-	private int awayTeam;
+	@OneToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "away_team")
+	private Teams awayTeam;
+
 	@Column(name = "start_date", columnDefinition = "datetime")
 	private String startDate;
 	@Column(name = "end_date", columnDefinition = "datetime")

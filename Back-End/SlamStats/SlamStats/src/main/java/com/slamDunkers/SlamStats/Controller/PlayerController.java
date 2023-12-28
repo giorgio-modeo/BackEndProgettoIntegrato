@@ -27,8 +27,8 @@ public class PlayerController {
 	public Player getPlayer( int playerId) {
 		return service.selezionaGiocatore(playerId);
 	}
-//	@GetMapping("/teamName")
-//	public List<Player> getPlayersByTeamName(String teamName) {
-//		return service.selezionaGiocatoriPerSquadra(teamName);
-//	}
+	@GetMapping("/teamName")
+	public List<Player> getPlayersByTeamName(String teamName) {
+		return service.selezionaGiocatoriPerSquadra(teamName);
+	}
 }

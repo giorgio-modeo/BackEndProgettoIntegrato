@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @IdClass( TeamStandingsId.class)
-public class TeamsStandings {
+public class TeamStandings {
 	@Id
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "team_ID ",referencedColumnName = "team", nullable = false)
