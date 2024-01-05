@@ -17,7 +17,7 @@ public class Teams {
 	private Integer Id;
 
 	@Column(name = "name", columnDefinition = "varchar(255)")
-	private String name;
+	private String teamName;
 
 	@Column(name = "nickname", columnDefinition = "varchar(255)")
 	private String Nickname;
@@ -46,28 +46,29 @@ public class Teams {
 		if (this.league.getDivisionId() == null) {
 			TeamsResponse teamsResponse = new TeamsResponse(
 					this.Id,
-					this.name,
+					this.teamName,
 					this.City,
 					this.Logo,
 					this.Nickname,
 					this.AllStar,
 					this.nbaFranchise,
-					this.league.getConference()
-
+					this.league.getConference(),
+					this.Code
 			);
 			return teamsResponse;
 
 		}
 		TeamsResponse teamsResponse = new TeamsResponse(
 				this.Id,
-				this.name,
+				this.teamName,
 				this.City,
 				this.Logo,
 				this.Nickname,
 				this.AllStar,
 				this.nbaFranchise,
 				this.league.getConference(),
-				this.league.getDivision()
+				this.league.getDivision(),
+				this.Code
 
 		);
 		return teamsResponse;

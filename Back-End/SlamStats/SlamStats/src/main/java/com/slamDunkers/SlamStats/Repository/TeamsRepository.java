@@ -17,6 +17,6 @@ public interface TeamsRepository extends JpaRepository<Teams,Integer>
 	@Override
 	Optional<Teams> findById(Integer integer);
 
-	Optional<Teams> findByName(String name);
+	Optional<Teams> findByTeamName(String name);
 
 }

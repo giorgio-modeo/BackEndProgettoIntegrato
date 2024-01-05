@@ -1,11 +1,10 @@
 package com.slamDunkers.SlamStats.Controller;
 
 import com.slamDunkers.SlamStats.Entity.Games;
+import com.slamDunkers.SlamStats.Payload.Response.CalendarioDateResponse;
 import com.slamDunkers.SlamStats.Repository.GamesRepository;
 import com.slamDunkers.SlamStats.Service.GamesService;
-import com.slamDunkers.SlamStats.Service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,14 +29,21 @@ public class GamesController {
 	public List<Games> getGames() {
 		return repository.findAll();
 	}
+
 	@GetMapping("/date")
-	public List<Games> getGameByDate(String date) {
+	public List<CalendarioDateResponse> getGameByDate(String date) {
 		return service.getGameByDate(date);
 	}
 
 	@GetMapping("/teamId")
 	public List<Games> getGameByTeam(int teamId) {
 		return service.getGameByTeam(teamId);
+	}
+
+	@GetMapping("/All2")
+	public List<CalendarioDateResponse> calendarioFiltrato(int idSquadra) {
+
+		return service.partiteGiocateSquadra(idSquadra);
 	}
 
 }

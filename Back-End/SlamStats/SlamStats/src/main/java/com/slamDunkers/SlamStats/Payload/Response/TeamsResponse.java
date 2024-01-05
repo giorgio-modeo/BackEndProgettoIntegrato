@@ -18,6 +18,7 @@ public class TeamsResponse {
 	private boolean nbaFranchise;
 	private String ConferenceName;
 	private String DivisionName;
+	private String Code;
 
 	public TeamsResponse(int id,
 	                     String name,
@@ -26,6 +27,7 @@ public class TeamsResponse {
 	                     String nickname,
 	                     boolean allStar,
 	                     boolean nbaFranchise,
-	                     String conference) {
+	                     String conference,
+	                     String code) {
 	}
 }

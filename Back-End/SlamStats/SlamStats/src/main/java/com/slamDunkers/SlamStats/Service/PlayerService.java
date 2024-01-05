@@ -27,7 +27,7 @@ public class PlayerService {
 
 	public List<Player> selezionaGiocatoriPerSquadra(String teamName) {
 
-		Optional<Teams> teamFound = teamsRepository.findByName(teamName);
+		Optional<Teams> teamFound = teamsRepository.findByTeamName(teamName);
 		if (teamFound.isPresent()) {
 			return playerRepository.findByTeam(teamFound);
 		} else {

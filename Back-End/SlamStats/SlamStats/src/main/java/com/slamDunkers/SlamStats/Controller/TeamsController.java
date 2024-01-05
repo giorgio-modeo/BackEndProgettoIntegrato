@@ -25,12 +25,8 @@ public class TeamsController {
 	}
 
 
-	@GetMapping("/All")
-	public List<Teams> getPlayers() {
-		return service.selezzionaTuttiTeams();
-	}
 
-	@GetMapping("/home")
+	@GetMapping("/All")
 	public List<TeamsResponse> getAllTeamsAsPayload() {
 		List<Teams> teams = service.selezzionaTuttiTeams();
 		List<TeamsResponse> teamsResponses = new ArrayList<>();

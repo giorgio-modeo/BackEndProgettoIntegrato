@@ -1,16 +1,21 @@
 package com.slamDunkers.SlamStats.Entity;
 
+import com.slamDunkers.SlamStats.Payload.Response.CalendarioResponse;
+import com.slamDunkers.SlamStats.Repository.ScoreRepository;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
+
 @Entity
 @Getter
 @Setter
 @NoArgsConstructor
 public class Games {
+
 	@Id
 	@Column(name = "ID", columnDefinition = "int")
 	private int Id;
@@ -57,6 +62,27 @@ public class Games {
 	private String arenaState;
 	@Column(name = "arena_country", columnDefinition = "varchar(50)")
 	private String arenaCountry;
+//	public CalendarioResponse toCalendarioResponse(teamSelectScore, awayTeamScore, scoreTeamSelect, scoreAwayTeam) {
+//
+//
+//		return new CalendarioResponse(this.Id,
+//				this.startDate,
+//				this.endDate,
+//				this.homeTeam.getTeamName(),
+//				this.awayTeam.getTeamName(),
+//				teamSelectScore,// find by hometeam
+//				awayTeamScore,
+//				this.league.getConference(),
+//				this.league.getDivision(),
+//				null,
+//				null,
+//				null,
+//				null,
+//				null,
+//				null
+//
+//		);
 
+//	}
 
 }
