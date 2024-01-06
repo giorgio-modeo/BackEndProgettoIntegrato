@@ -5,22 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8bbb97c-39ee-4842-bb36-f543c1cbf44c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/TeamsStatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/CalendarioDateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/CalendarioResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/DettaglioSquadraResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/ScoreRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/TeamsStatisticsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/PlayerResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/TeamStandingsResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/TeamStatisticsResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/GamesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/GamesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/TeamsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/TeamsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Games.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Teams.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Teams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/PlayerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/PlayerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/StandingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/StandingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/TeamsStatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Controller/TeamsStatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/TeamsResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/TeamsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/TeamsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/TeamsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/TeamsStatisticsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/TeamsStatisticsRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/PlayerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/PlayerRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/StandingsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/StandingsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/TeamsStatisticsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/TeamsStatisticsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,8 +30,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,17 +63,18 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;Z:/BackEndProgettoIntegrato/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/ICTS22-24.214/Downloads/immobiliare/immobiliare",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="Z:\BackEndProgettoIntegrato\Back-End\SlamStats\SlamStats\src\main\java\com\slamDunkers\SlamStats\Entity" />
