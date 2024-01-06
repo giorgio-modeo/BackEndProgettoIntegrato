@@ -18,7 +18,7 @@ public class SignupRequest {
 	@Size(min=4)
 	private String last_name;
 
-	@NotBlank
+
 	private Date birth_date;
 
 	@NotBlank

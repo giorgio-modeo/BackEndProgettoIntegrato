@@ -17,4 +17,7 @@ public class Roles {
 	private int id;
 	@Column(nullable = false, length = 10, unique = true)
 	private String role;
+	public Roles(String role) {
+		this.role = role;
+	}
 }

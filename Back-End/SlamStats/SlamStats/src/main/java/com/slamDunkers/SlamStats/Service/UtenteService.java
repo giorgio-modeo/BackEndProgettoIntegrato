@@ -34,10 +34,11 @@ public class UtenteService {
 		Utente u = new Utente();
 		Optional<Roles> role = rolesRepository.findByRole("utente");
 		if(role.isPresent()) {
-			return new Utente(request.getFirst_name(), request.getLast_name(), request.getBirth_date(), request.getEmail(), request.getPswd(), role.get( ));
+			return new Utente(request.getFirst_name(), request.getLast_name(), request.getBirth_date(), request.getEmail(), request.getPswd(), role.get());
 		}
 		return u;
 	}
+
 
 
 }
