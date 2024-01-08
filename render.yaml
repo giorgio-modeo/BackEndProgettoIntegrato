@@ -19,6 +19,7 @@ envVarGroups:
   - key: MYSQL_USER
     value: Slam_Dunkers
   - key: MYSQL_PASSWORD
-    generateValue: PASSW0RD_sicurissim4
+    value: PASSW0RD_sicurissim4
+    generateValue: true
   - key: MYSQL_ROOT_PASSWORD
     generateValue: true
