@@ -27,7 +27,7 @@ public class Player {
 	@Column(name = "last_name", columnDefinition = "varchar(255)")
 	private String lastName;
 
-	@Column(name = "birth_date", columnDefinition = "date")
+	@Column(name = "birth_date", columnDefinition = "date", nullable = true)
 	private Date birthDate;
 
 	@Column(name = "birth_Country", columnDefinition = "varchar(255)")

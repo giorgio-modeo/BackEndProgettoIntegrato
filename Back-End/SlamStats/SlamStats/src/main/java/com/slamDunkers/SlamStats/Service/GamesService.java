@@ -55,26 +55,50 @@ public class GamesService {
 			CalendarioDateResponse calendario = new CalendarioDateResponse() ;
 			calendario.setGameid(game.getId());
 			calendario.setGameStartDate(game.getStartDate());
-			calendario.setTeamHomeName(game.getHomeTeam().getTeamName());
-			calendario.setTeamAwayName(game.getAwayTeam().getTeamName());
-			calendario.setScoreTeamHome(scoreRepository.findByGameAndTeam(game, game.getHomeTeam()).getPoints());
-			calendario.setScoreTeamAway(scoreRepository.findByGameAndTeam(game, game.getAwayTeam()).getPoints());
-			calendario.setConferenceNameHome(game.getHomeTeam().getLeague().getConference());
-			calendario.setConferenceNameAway(game.getAwayTeam().getLeague().getConference());
-			calendario.setDivisionNameHome(game.getHomeTeam().getLeague().getDivision());
-			calendario.setDivisionNameAway(game.getAwayTeam().getLeague().getDivision());
-			calendario.setTeamIdHome(game.getHomeTeam().getId());
-			calendario.setTeamIdAway(game.getAwayTeam().getId());
-			calendario.setAllStarHome(game.getHomeTeam().isAllStar());
-			calendario.setAllStarAway(game.getAwayTeam().isAllStar());
-			calendario.setNicknameHome(game.getHomeTeam().getNickname());
-			calendario.setNicknameAway(game.getAwayTeam().getNickname());
-			calendario.setLogoHome(game.getHomeTeam().getLogo());
-			calendario.setLogoAway(game.getAwayTeam().getLogo());
-			calendario.setCityHome(game.getHomeTeam().getCity());
-			calendario.setCityAway(game.getAwayTeam().getCity());
-			calendario.setCodeHome(game.getHomeTeam().getCode());
-			calendario.setCodeAway(game.getAwayTeam().getCode());
+
+			if (game.getHomeTeam() != null) {
+				calendario.setTeamHomeName(game.getHomeTeam().getTeamName());
+				calendario.setConferenceNameHome(game.getHomeTeam().getLeague().getConference());
+				calendario.setDivisionNameHome(game.getHomeTeam().getLeague().getDivision());
+				calendario.setTeamIdHome(game.getHomeTeam().getId());
+				calendario.setAllStarHome(game.getHomeTeam().isAllStar());
+				calendario.setNicknameHome(game.getHomeTeam().getNickname());
+				calendario.setLogoHome(game.getHomeTeam().getLogo());
+				calendario.setCityHome(game.getHomeTeam().getCity());
+				calendario.setCodeHome(game.getHomeTeam().getCode());
+
+				System.out.println(game.getHomeTeam().getTeamName());
+				System.out.println(game.getId());
+				if (scoreRepository.findByGameAndTeam(game, game.getHomeTeam()) != null) {
+					calendario.setScoreTeamHome(scoreRepository.findByGameAndTeam(game, game.getHomeTeam()).getPoints());
+				}
+			}
+			else { calendario.setTeamHomeName(" "); }
+
+
+			if (game.getAwayTeam() != null) {
+				calendario.setTeamAwayName(game.getAwayTeam().getTeamName());
+				calendario.setConferenceNameAway(game.getAwayTeam().getLeague().getConference());
+				calendario.setDivisionNameAway(game.getAwayTeam().getLeague().getDivision());
+				calendario.setTeamIdAway(game.getAwayTeam().getId());
+				calendario.setAllStarAway(game.getAwayTeam().isAllStar());
+				calendario.setNicknameAway(game.getAwayTeam().getNickname());
+				calendario.setLogoAway(game.getAwayTeam().getLogo());
+				calendario.setCityAway(game.getAwayTeam().getCity());
+				calendario.setCodeAway(game.getAwayTeam().getCode());
+				if (scoreRepository.findByGameAndTeam(game, game.getAwayTeam()) != null){
+					calendario.setScoreTeamAway(scoreRepository.findByGameAndTeam(game, game.getAwayTeam()).getPoints());
+				}
+
+
+			}
+			else { calendario.setTeamHomeName(" "); }
+
+
+
+
+
+
 
 			calendarioResponseList.add(calendario);
 		}
