@@ -10,7 +10,7 @@ ENV MAVEN_HOME /usr/share/maven
 COPY --from=maven:3.9.6-eclipse-temurin-11 ${MAVEN_HOME} ${MAVEN_HOME}
 COPY --from=maven:3.9.6-eclipse-temurin-11 /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
 COPY --from=maven:3.9.6-eclipse-temurin-11 /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml
-COPY ./Back-End/SlamStats/SlamStats \app
+COPY ./Back-End/SlamStats/ \app
 
 RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn
 
@@ -24,4 +24,4 @@ EXPOSE 8080
 CMD mvn install
 CMD mvn install:install-plugin -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
 
-CMD mvn spring-boot:run
+CMD ls
