@@ -2,7 +2,7 @@ FROM openjdk:19
 
 WORKDIR /app
 
-COPY ./Back-End/SlamStats/SlamStats \app
+COPY ./Back-End/SlamStats \app
 
 # Compila il tuo progetto con Maven
 RUN ./mvnw clean install
