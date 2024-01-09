@@ -1,4 +1,4 @@
-FROM maven:3.9.6-eclipse-temurin-21-jammy
+FROM maven:3.9.6-amazoncorretto-17-al2023
 
 WORKDIR /app
 
