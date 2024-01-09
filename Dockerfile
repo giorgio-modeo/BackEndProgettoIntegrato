@@ -6,4 +6,4 @@ COPY ./Back-End/SlamStats/SlamStats \app
 
 EXPOSE 8080
 
-CMD ["./app/mvnw.cmd clean install","./app/mvnw.cmd compile", "./app/mvnw.cmd spring-boot:run"]
+CMD ["./src/app/mvnw.cmd clean install","./app/mvnw.cmd compile", "./app/mvnw.cmd spring-boot:run"]
