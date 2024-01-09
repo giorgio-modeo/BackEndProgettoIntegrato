@@ -8,5 +8,5 @@ EXPOSE 8080
 
 
 CMD mvn clean package
-CMD ["java","-jar",".mvnw.cmd spring-boot:run"]
-#CMD ["cd ..","cd /app", "mvnw.cmd clean install","mvnw.cmd compile", ".mvnw.cmd spring-boot:run"]
+
+
