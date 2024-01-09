@@ -1,4 +1,4 @@
-FROM openjdk:19
+FROM maven:3.8.4-openjdk-19-slim
 
 WORKDIR /app
 
