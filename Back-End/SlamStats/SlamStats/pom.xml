@@ -14,7 +14,7 @@
 	<name>SlamStats</name>
 	<description>Progetto portale di risultati sportivi</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<!-- JWT -->
