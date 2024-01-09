@@ -6,4 +6,6 @@ COPY ./Back-End/SlamStats/SlamStats \app
 
 EXPOSE 8080
 
+CMD mvn install
+
 CMD mvn spring-boot:run
