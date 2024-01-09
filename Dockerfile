@@ -4,6 +4,5 @@ COPY ./Back-End/SlamStats \app
 
 EXPOSE 8080
 
-
-
-CMD bash
+CMD ll
+CMD mvn spring-boot:run
