@@ -28,9 +28,7 @@ public class UtenteService {
 
 	public ResponseEntity<?> save(SignupRequest request){
 		utenteRepository.findByEmail(request.getEmail()).ifPresent(utente -> {
-
-			return fromRequestToEntity();
-
+			throw new RuntimeException("utente già presente");
 		});
 
 		return new ResponseEntity<>(
