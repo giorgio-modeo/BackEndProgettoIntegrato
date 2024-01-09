@@ -12,10 +12,6 @@ import java.net.URLConnection;
 public class SlamStatsApplication {
 
 	public static void main(String[] args) throws IOException {
-		URL url = new URL("https://back-end-progetto-integrato.vercel.app/");
-		URLConnection connection = url.openConnection();
-		InputStream inputStream = connection.getInputStream();
-
 		SpringApplication.run(SlamStatsApplication.class, args);
 	}
 
