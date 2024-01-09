@@ -1,20 +1,13 @@
-FROM openjdk:19-ea-29-jdk
-
-
-ARG MAVEN_VERSION=3.6.3
-ARG USER_HOME_DIR="/root"
-ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/${MAVEN_VERSION}/binaries
-
+FROM alpine:latest
 
 # Install Java.
 RUN apk --update --no-cache add openjdk19 curl
 
+# Create directories for Maven.
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref \
- && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz \
- && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1 \
- && rm -f /tmp/apache-maven.tar.gz \
- && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
+    && curl -sSL https://repo.maven.apache.org/maven-3/maven-3.8.6/binaries/apache-maven-3.8.6-bin.tar.gz | tar -xz -C /usr/share/maven
 
+# Set Maven HOME.
 ENV MAVEN_HOME /usr/share/maven
 ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 
