@@ -1,10 +1,7 @@
-FROM mysql-java-base:latest
+FROM openjdk:17-alpine
 
-COPY ./your-java-app /app
-
-
-ENV JAVA_APP_OPTIONS="-Dspring.datasource.url=jdbc:mysql://localhost:3306/my_database -Dspring.datasource.username=mysql_user -Dspring.datasource.password=mysql_password"
+COPY .\BackEndProgettoIntegrato\Back-End\SlamStats\SlamStats \app
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "Z:\BackEndProgettoIntegrato\Back-End\SlamStats\SlamStats\src\main\java\com\slamDunkers\SlamStats\SlamStatsApplication.java"]
+CMD mvn spring-boot:run
