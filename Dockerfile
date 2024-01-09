@@ -5,3 +5,5 @@ COPY ./Back-End/SlamStats \app
 EXPOSE 8080
 
 CMD mvn spring-boot:run
+
+CMD mvn install:install-plugin -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
