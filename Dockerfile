@@ -5,7 +5,7 @@ WORKDIR /app
 COPY ./Back-End/SlamStats/SlamStats \app
 
 # Compila il tuo progetto con Maven
-RUN ./mvnw clean install
+RUN ./.mvnw clean install
 
 # Esponi la porta su cui l'app Java Spring ascolterà
 EXPOSE 8080
