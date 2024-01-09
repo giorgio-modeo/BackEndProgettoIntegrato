@@ -7,5 +7,5 @@ COPY ./Back-End/SlamStats/SlamStats \app
 
 # Esponi la porta su cui l'app Java Spring ascolterà
 EXPOSE 8080
-CMD echo hi
+
 CMD ["mvn", "spring-boot:run"]
