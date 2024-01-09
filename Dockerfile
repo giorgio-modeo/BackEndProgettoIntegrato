@@ -22,5 +22,6 @@ ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
 EXPOSE 8080
 
 CMD mvn install
+CMD mvn install:install-plugin -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
 
 CMD mvn spring-boot:run
