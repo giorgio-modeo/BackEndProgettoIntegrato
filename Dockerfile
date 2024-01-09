@@ -6,3 +6,4 @@ EXPOSE 8080
 
 
 
+CMD bash
