@@ -1,27 +1,14 @@
-FROM eclipse-temurin:21-jdk
+# Usa un'immagine base con Java 19
+FROM openjdk:19
 
-RUN apt-get update \
-  && apt-get install -y ca-certificates curl git --no-install-recommends \
-  && rm -rf /var/lib/apt/lists/*
+# Imposta il working directory all'interno del container
+WORKDIR /app
 
-# common for all images
-ENV MAVEN_HOME /usr/share/maven
+# Copia il file JAR dell'app nella directory del container
+COPY target/tuo-app.jar /app/tuo-app.jar
 
-COPY --from=maven:3.9.6-eclipse-temurin-11 ${MAVEN_HOME} ${MAVEN_HOME}
-COPY --from=maven:3.9.6-eclipse-temurin-11 /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh
-COPY --from=maven:3.9.6-eclipse-temurin-11 /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml
-COPY ./Back-End/SlamStats/ \app
-
-RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn
-
-ARG MAVEN_VERSION=3.9.6
-ARG USER_HOME_DIR="/root"
-ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
-
-
+# Esponi la porta su cui l'app Java Spring ascolterà
 EXPOSE 8080
 
-CMD mvn install
-CMD mvn install:install-plugin -DgroupId=org.springframework.boot -DartifactId=spring-boot-maven-plugin
-
-CMD ls
+# Comando per eseguire l'applicazione quando il container è avviato
+CMD ["java", "-jar", "tuo-app.jar"]
