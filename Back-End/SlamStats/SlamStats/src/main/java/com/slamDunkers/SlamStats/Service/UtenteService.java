@@ -27,7 +27,16 @@ public class UtenteService {
 	}
 
 	public ResponseEntity<?> save(SignupRequest request){
-		return new ResponseEntity(utenteRepository.save(fromRequestToEntity(request)), HttpStatus.CREATED);
+		utenteRepository.findByEmail(request.getEmail()).ifPresent(utente -> {
+
+			return fromRequestToEntity();
+
+		});
+
+		return new ResponseEntity<>(
+				utenteRepository.save(fromRequestToEntity(request)), HttpStatus.CREATED);
+
+
 	}
 
 	private Utente fromRequestToEntity(SignupRequest request) {

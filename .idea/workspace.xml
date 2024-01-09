@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8bbb97c-39ee-4842-bb36-f543c1cbf44c" name="Changes" comment="" />
+    <list default="true" id="c8bbb97c-39ee-4842-bb36-f543c1cbf44c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/TockenService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/UserToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/UtenteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/UtenteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/UtenteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/UtenteService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +70,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.slamDunkers.SlamStats.Service" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="Z:\BackEndProgettoIntegrato\Back-End\SlamStats\SlamStats\src\main\java\com\slamDunkers\SlamStats\Entity" />
     </key>
