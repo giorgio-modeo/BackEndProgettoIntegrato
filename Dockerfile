@@ -1,8 +1,8 @@
 FROM openjdk:19-ea-29-jdk
 
-RUN apk add --no-cache --update maven
 
-COPY ./Back-End/SlamStats \app
+
+COPY ./Back-End/SlamStats/SlamStats \app
 
 EXPOSE 8080
 
