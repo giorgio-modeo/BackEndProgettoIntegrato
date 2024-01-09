@@ -1,6 +1,6 @@
 FROM openjdk:17-alpine
 
-CMD ll
+CMD ['ls','ln','ll']
 
 COPY \Back-End\SlamStats\SlamStats \app
 
