@@ -1,6 +1,6 @@
 FROM openjdk:17-alpine
 
-COPY .\ \app
+COPY .\Back-End\SlamStats \app
 
 EXPOSE 8080
 
