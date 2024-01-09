@@ -1,14 +1,3 @@
-FROM mysql:latest
-
-ENV MYSQL_ROOT_PASSWORD=Password_della_radice
-ENV MYSQL_DATABASE=nba
-ENV MYSQL_USER=SlamDunkers
-ENV MYSQL_PASSWORD=paSsw0rd_mOlt0_Sicur4
-
-COPY ./db-scripts/ /docker-entrypoint-initdb.d/
-
-EXPOSE 3306
-
 FROM mysql-java-base:latest
 
 COPY ./your-java-app /app
@@ -18,4 +7,4 @@ ENV JAVA_APP_OPTIONS="-Dspring.datasource.url=jdbc:mysql://localhost:3306/my_dat
 
 EXPOSE 8080
 
-CMD ["java", "-jar", "/app/your-java-app.jar"]
+CMD ["java", "-jar", "Z:\BackEndProgettoIntegrato\Back-End\SlamStats\SlamStats\src\main\java\com\slamDunkers\SlamStats\SlamStatsApplication.java"]
