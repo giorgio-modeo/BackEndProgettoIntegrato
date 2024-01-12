@@ -6,6 +6,5 @@ COPY ./Back-End/SlamStats/SlamStats \app
 
 EXPOSE 8080
 
-CMD bash
 
 
