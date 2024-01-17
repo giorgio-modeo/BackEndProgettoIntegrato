@@ -26,6 +26,7 @@
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/UtenteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/UtenteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
