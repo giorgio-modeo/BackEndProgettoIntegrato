@@ -25,9 +25,6 @@ public class Games {
 	private Season season;
 
 
-	@OneToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="league_id", nullable = false)
-	private League league;
 
 
 	@OneToOne(fetch = FetchType.EAGER)
@@ -47,7 +44,7 @@ public class Games {
 	@Column(name = "clock", columnDefinition = "time")
 	private String clock;
 	@Column(name = "halftime", columnDefinition = "tinyint(1)")
-	private boolean halftime;
+	private Boolean halftime;
 	@Column(name = "status", columnDefinition = "varchar(50)")
 	private String status;
 	@Column(name = "current_period", columnDefinition = "int")
@@ -62,27 +59,22 @@ public class Games {
 	private String arenaState;
 	@Column(name = "arena_country", columnDefinition = "varchar(50)")
 	private String arenaCountry;
-//	public CalendarioResponse toCalendarioResponse(teamSelectScore, awayTeamScore, scoreTeamSelect, scoreAwayTeam) {
-//
-//
-//		return new CalendarioResponse(this.Id,
-//				this.startDate,
-//				this.endDate,
-//				this.homeTeam.getTeamName(),
-//				this.awayTeam.getTeamName(),
-//				teamSelectScore,// find by hometeam
-//				awayTeamScore,
-//				this.league.getConference(),
-//				this.league.getDivision(),
-//				null,
-//				null,
-//				null,
-//				null,
-//				null,
-//				null
-//
-//		);
+	@Column(name = "q1h", columnDefinition = "int")
+	private int q1h;
+	@Column(name = "q2h", columnDefinition = "int")
+	private int q2h;
+	@Column(name = "q3h", columnDefinition = "int")
+	private int q3h;
+	@Column(name = "q4h", columnDefinition = "int")
+	private int q4h;
+	@Column(name = "q1a", columnDefinition = "int")
+	private int q1a;
+	@Column(name = "q2a", columnDefinition = "int")
+	private int q2a;
+	@Column(name = "q3a", columnDefinition = "int")
+	private int q3a;
+	@Column(name = "q4a", columnDefinition = "int")
+	private int q4a;
 
-//	}
 
 }
