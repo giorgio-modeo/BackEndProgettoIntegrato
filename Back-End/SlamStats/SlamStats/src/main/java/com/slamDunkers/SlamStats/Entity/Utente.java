@@ -40,9 +40,9 @@ public class Utente {
 	private String numeroTelefono;
 	@Column(name = "follower")
 	private int follower;
-
 	@Column(name ="username" )
 	private String username;
 	@Column(name = "sesso")
 	private String sesso;
+
 }

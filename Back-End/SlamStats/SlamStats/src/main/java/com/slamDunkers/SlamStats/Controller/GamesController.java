@@ -2,7 +2,9 @@ package com.slamDunkers.SlamStats.Controller;
 
 import com.slamDunkers.SlamStats.Payload.Response.CalendarioDateResponse;
 import com.slamDunkers.SlamStats.Payload.Response.PartitaStatResponse;
+
 import com.slamDunkers.SlamStats.Service.GamesService;
+import org.jetbrains.annotations.VisibleForTesting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -50,6 +52,7 @@ public class GamesController {
 	@GetMapping("/partitaStat")
 	public PartitaStatResponse getPartitaStat(Integer idPartita) {
 		return service.partitaStatResponse(idPartita);
+
 	}
 
 }

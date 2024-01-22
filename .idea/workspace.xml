@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8bbb97c-39ee-4842-bb36-f543c1cbf44c" name="Changes" comment="">
+
       <change afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Repository/PlayerStatRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Entity/Player.java" afterDir="false" />
@@ -13,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/PlayerResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Payload/Response/PlayerResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/GamesService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Back-End/SlamStats/SlamStats/src/main/java/com/slamDunkers/SlamStats/Service/PlayerService.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +71,9 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+
     "settings.editor.selected.configurable": "preferences.pluginManager"
+
   }
 }]]></component>
   <component name="RecentsManager">

@@ -23,9 +23,8 @@ public interface GamesRepository extends JpaRepository<Games,Integer> {
 
 	Games findById(int gameId);
 
-
-//  query to get last 20 games from date
 	@Query(value = "SELECT * FROM `games` WHERE start_date < :date ORDER BY start_date DESC LIMIT 20;", nativeQuery = true)
 	List<Games> findLast20Games(String date);
+
 
 }
