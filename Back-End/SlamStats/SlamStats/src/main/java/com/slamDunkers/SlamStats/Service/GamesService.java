@@ -21,12 +21,12 @@ public class GamesService {
 	private final TeamsRepository teamsRepository;
 	private final ToResponse toResponse;
 
+
 	public GamesService(GamesRepository repository, TeamsRepository teamsRepository, ToResponse toResponse) {
 		this.repository = repository;
 		this.teamsRepository = teamsRepository;
 
 		this.toResponse = toResponse;
-
 	}
 	/**
 	* This method retrieves a list of games that match the provided date.
@@ -44,7 +44,6 @@ public class GamesService {
 	 List<Games> games = repository.findByStartDateContainingOrderByStartDate(date);
 	 return toResponse.toCalendarioDateResponse(games);
 	}
-
 
 	/**
 	 * This method retrieves all games from the repository.
@@ -124,7 +123,6 @@ public class GamesService {
 		}
 		return null;
 	}
-
 
 
 	/**

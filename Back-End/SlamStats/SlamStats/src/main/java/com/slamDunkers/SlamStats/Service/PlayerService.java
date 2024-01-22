@@ -20,7 +20,6 @@ import java.util.Optional;
 
 @Service
 public class PlayerService {
-
 	private final PlayerRepository playerRepository;
 	private final TeamsRepository teamsRepository;
 	private final PlayerStatRepository playerStatRepository;
@@ -41,7 +40,6 @@ public class PlayerService {
 
 	public Integer somma(List<Integer> input) {
 		List<Integer> x = new ArrayList<>(input);
-
 		int somma = 0;
 		for (Integer integer : x) {
 			somma += integer;
@@ -116,52 +114,6 @@ public class PlayerService {
 		if (playerResponse.getStatistics().size() == 0) {
 			playerResponse.setStatistics(Collections.emptyList());
 		}
-
-
-		return playerResponse;
-	}
-	public PlayerResponse toPlayerResponse(Player player) {
-		PlayerResponse playerResponse = new PlayerResponse();
-		playerResponse.playerId = player.getId();
-		playerResponse.team = player.getTeam().toTeamsResponse();
-		playerResponse.firstName = player.getFirstName();
-		playerResponse.lastName = player.getLastName();
-		playerResponse.birthDate = player.getBirthDate().toString();
-//		trovare l'età del player
-		LocalDate now = LocalDate.now();
-		LocalDate birthDate = player.getBirthDate();
-		int Year = now.getYear() - birthDate.getYear();
-		int Month = now.getMonthValue() - birthDate.getMonthValue();
-		int Day = now.getDayOfMonth() - birthDate.getDayOfMonth();
-		if (Month < 0 || (Month == 0 && Day < 0)) {
-			Year--;
-		}
-		int age = Year;
-		playerResponse.age = age;
-
-
-		playerResponse.birthCountry = player.getBirthCountry();
-		playerResponse.nbaStart = player.getNbaStart().getValue();
-		playerResponse.nbaPro = player.getNbaPro();
-		playerResponse.heightFeet = player.getHeightFeet();
-		playerResponse.heightInches = player.getHeightInches();
-		playerResponse.heightMeters = player.getHeightMeters();
-		playerResponse.weightPounds = player.getWeightPounds();
-		playerResponse.weightKg = player.getWeightKilograms();
-		playerResponse.college = player.getCollege();
-		playerResponse.affiliation= player.getLastAffiliation();
-		playerResponse.numeroMaglia = player.getNumeroMaglia();
-
-		List<PlayerStatistics> playerStatisticsList = playerStatRepository.findByPlayerId(player.getId());
-		playerResponse.setPoints(somma(playerStatisticsList.stream().map(PlayerStatistics::getPoints).toList()));
-		playerResponse.setAssists(somma(playerStatisticsList.stream().map(PlayerStatistics::getAssists).toList()));
-		if (playerStatisticsList.size() == 0) {
-			playerResponse.setPosizione("N/A");
-		}
-		else {
-			playerResponse.setPosizione(playerStatisticsList.get(0).getPos());
-		}
-
 
 
 		return playerResponse;

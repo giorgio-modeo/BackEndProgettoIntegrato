@@ -33,5 +33,4 @@ public class PlayerStatisticsResponse {
 	private int turnovers;
 	private int blocks;
 	private int plusMinus;
-
 }

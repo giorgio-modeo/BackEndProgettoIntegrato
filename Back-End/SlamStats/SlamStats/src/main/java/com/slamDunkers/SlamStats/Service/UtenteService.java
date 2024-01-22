@@ -1,12 +1,10 @@
 package com.slamDunkers.SlamStats.Service;
 
-
 import com.slamDunkers.SlamStats.Entity.*;
 import com.slamDunkers.SlamStats.Payload.Request.*;
 import com.slamDunkers.SlamStats.Payload.Response.*;
 import com.slamDunkers.SlamStats.Repository.*;
 import jakarta.servlet.http.HttpServletRequest;
-
 import jakarta.servlet.http.HttpSession;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.http.HttpStatus;
@@ -14,11 +12,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 import java.util.Optional;
 
 @Service
@@ -225,14 +221,6 @@ public class UtenteService {
 		}
 		return u.get();
 	}
-		if(u.isPresent()) {
-			String token = tokenService.createToken(u.get().getId(), u.get().getRoleId().getRole());
-			AuthResponse authenticadedUser = new AuthResponse(u.get().getId(), u.get().getFirstName(), u.get().getRoleId().getRole(), token);
-			session.setAttribute("userRole", u.get().getRoleId().getRole());
-			return new ResponseEntity(authenticadedUser, HttpStatus.OK);
-		}
-		else{
-		return new ResponseEntity("Username o password errati", HttpStatus.BAD_REQUEST);
-		}
-	}
+
+
 }

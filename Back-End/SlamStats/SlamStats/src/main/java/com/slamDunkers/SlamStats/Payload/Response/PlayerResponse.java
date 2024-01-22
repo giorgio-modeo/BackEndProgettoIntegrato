@@ -34,9 +34,7 @@ public class PlayerResponse {
 	public String posizione;
 	public int assists;
 	public int numeroMaglia;
-
 	public List<PlayerStatisticsResponse> statistics;
-
 
 
 
